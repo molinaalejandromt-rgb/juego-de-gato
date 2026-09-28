@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gato · Mesa de juego</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="mesa">
+
+    <!-- Tablero de madera -->
+    <section class="tabla">
+      <div class="tablero" id="tablero" aria-label="Tablero del gato"></div>
+    </section>
+
+    <!-- Panel lateral -->
+    <aside class="panel">
+      <h1>El gato</h1>
+      <p class="estado" id="estado" aria-live="polite">Abre la partida X</p>
+
+      <ul class="jugadores">
+        <li class="jugador" id="tarjeta-x">
+          <span class="pieza pieza-x">X</span>
+          <span class="nombre">Marfil</span>
+          <span class="puntos" id="puntos-x">0</span>
+        </li>
+        <li class="jugador" id="tarjeta-o">
+          <span class="pieza pieza-o">O</span>
+          <span class="nombre">Latón</span>
+          <span class="puntos" id="puntos-o">0</span>
+        </li>
+        <li class="jugador empate">
+          <span class="pieza pieza-e">·</span>
+          <span class="nombre">Tablas</span>
+          <span class="puntos" id="puntos-empate">0</span>
+        </li>
+      </ul>
+
+      <details class="historial" open>
+        <summary>Movimientos</summary>
+        <ol id="lista-jugadas"></ol>
+      </details>
+
+      <div class="controles">
+        <button class="boton lleno" id="btn-nueva">Nueva partida</button>
+        <button class="boton" id="btn-reiniciar">Reiniciar puntos</button>
+      </div>
+    </aside>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
